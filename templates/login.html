@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h4 align="center">Аварийный доступ</h4>
+<br>
+<h5 align="center">
+{% set a = "Каюта №" %}
+{% for user in li%}
+    {{ user }} - {{ a }} {{ loop.index }} {% if loop.first %} - каюта капитана {% endif %}
+<br>
+
+    {% endfor %}
+    </h5>
+{% endblock %}
